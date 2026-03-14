@@ -32,4 +32,52 @@ class WebCrawler:
            return ""
            
            
-    def analyze
+    def analyze_text(self,text):
+
+
+
+    def worker(self):
+
+
+
+
+
+     def run(self,num_threads=4):
+        threads=[]
+        
+        for i in range(num_threads):
+
+
+           
+
+
+
+
+        
+class ResultExporter:
+
+
+
+def main():
+    urls=[
+                 "https://example.com",
+        "https://www.python.org",
+        "https://www.wikipedia.org",
+        "https://www.bbc.com"
+       ]
+     keywords=["python", "data", "code", "programming"]
+     crawler=WebCrawler(urls,keywords)
+     print("\n Starting crawler...\n")
+     results=crawler.run(num_threads=4)
+     print("\nAnalysis Results\n")
+
+     for url,data in results.items():
+             print(url)
+             for k,v in data.items():
+                     print(f" {k}:{v}")
+              print()
+     exporter=ResultExporter(results)
+     exporter.export_to_file()
+
+if __name__=="__main__":
+   main()
