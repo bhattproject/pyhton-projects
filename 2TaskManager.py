@@ -3,35 +3,6 @@ import os
 from datetime import datetime
 
 class Task:
-  def __init__(self,title,priority,due_date):
-    self.title=title
-    self.priority=priority
-    self.due_date=due_date
-    self.created=datetime.now().strftime("%Y-%m-%d %H:%M")
-    self.completed=False
-    
-  def to_dict(self):
-    return{
-       "title":self.title,
-       "priority":self.priority,
-       "due_date":self.due_date,
-       "created":self.created,
-       "completed":self.completed
-       
-    }
-  @staticmethod
-  def from_dict(data):
-    task=Task(data["title"],data["priority"],data["due_date"])
-    task.created=data["created"]
-    task.completed=data["completed"]
-    return task
-
-
-"""import json
-import os
-from datetime import datetime
-
-class Task:
     def __init__(self, title, priority, due_date):
         self.title = title
         self.priority = priority
@@ -152,4 +123,4 @@ def menu():
 
 if __name__ == "__main__":
     menu()
-    """
+  
